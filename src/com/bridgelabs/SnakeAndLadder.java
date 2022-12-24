@@ -30,6 +30,8 @@ public class SnakeAndLadder {
                 case IS_LADDERS:
                     System.out.println("Player moves ahead");
                     player_Position += diceRoll;
+                    if(player_Position > WINNING_POSITION)
+                        player_Position -= diceRoll;
                     break;
                 case default:
                     System.out.println("Player stays in same position");
