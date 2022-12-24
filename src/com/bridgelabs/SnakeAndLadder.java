@@ -5,6 +5,7 @@ public class SnakeAndLadder {
     static final int IS_SNAKES = 1;
     static final int IS_LADDERS = 2;
     static final int WINNING_POSITION = 100;
+    static int diceCount = 0;
     static int diceRoll() {
         int dice = ((int) (Math.random() * 10) % 6) + 1;
         System.out.println(dice);
@@ -36,6 +37,9 @@ public class SnakeAndLadder {
                 case default:
                     System.out.println("Player stays in same position");
             }
+            diceCount++;
+            System.out.println("Player position : "+player_Position);
+            System.out.println("Number of times player rolls the dice:"+diceCount);
         }
     }
 }
