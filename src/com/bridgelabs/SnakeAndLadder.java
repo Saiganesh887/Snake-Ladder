@@ -58,21 +58,21 @@ public class SnakeAndLadder {
             if (toss == 0) {
                 System.out.println("Player1 is rolling ");
                 player1_Position = playGame(player1_Position);
+                 if (player1_Position == WINNING_POSITION) {
+                System.out.println("Player1 is Winner");
+                break;
+            }
                 toss = 1;
             }
             if (toss == 1) {
                 System.out.println("Player2 is rolling");
                 player2_Position = playGame(player2_Position);
-                toss = 0;
-            }
-            if (player1_Position == WINNING_POSITION) {
-                System.out.println("Player1 is Winner");
-                break;
-            }
-            if (player2_Position == WINNING_POSITION) {
+                if (player2_Position == WINNING_POSITION) {
                 System.out.println("Player2 is Winner");
                 break;
-            }
+                }
+                toss = 0;
+            }          
         }
     }
 }
